@@ -1,4 +1,4 @@
-# hex-berlekamp-zassenhaus-mathlib
+# hex-berlekamp-zassenhaus-theory
 
 Part of [`hex`](https://github.com/kim-em/hex-dev), a computer algebra
 library for Lean 4.
@@ -13,17 +13,17 @@ normalization, and uniqueness of the returned factors.
 
 ```toml
 [[require]]
-name = "hex-berlekamp-zassenhaus-mathlib"
-git = "https://github.com/leanprover/hex-berlekamp-zassenhaus-mathlib.git"
+name = "hex-berlekamp-zassenhaus-theory"
+git = "https://github.com/leanprover/hex-berlekamp-zassenhaus-theory.git"
 rev = "main"
 ```
 
 ```lean
-import HexBerlekampZassenhausMathlib
+import HexBerlekampZassenhausTheory
 
-#check HexBerlekampZassenhausMathlib.factorize_product
-#check HexBerlekampZassenhausMathlib.factorize_normalized
-#check HexBerlekampZassenhausMathlib.factorize_unique
+#check HexBerlekampZassenhausTheory.factorize_product
+#check HexBerlekampZassenhausTheory.factorize_normalized
+#check HexBerlekampZassenhausTheory.factorize_unique
 #check Hex.ZPoly.Irreducible_iff_polynomialIrreducible
 ```
 
@@ -41,7 +41,7 @@ emit certificates. The explicitly expensive `factor_poly!` and
 polynomials outside the ordinary certificate languages.
 
 ```lean
-import HexBerlekampZassenhausMathlib
+import HexBerlekampZassenhausTheory
 
 open Polynomial
 
@@ -52,7 +52,7 @@ example : Irreducible (X ^ 4 + 8 * X + 12 : Polynomial ℤ) := by
   irreducibility
 ```
 
-Import `HexBerlekampZassenhausMathlib.All` only when developing the detailed
+Import `HexBerlekampZassenhausTheory.All` only when developing the detailed
 modular, Hensel, lattice, and recombination proofs.
 
 # Verification
@@ -63,7 +63,7 @@ recover support partitions, prove both classical and lattice recombination
 complete under their stated hypotheses, and prove the exact trial
 factorization irreducible.
 
-See the [SPEC](SPEC/hex-berlekamp-zassenhaus-mathlib.md) for the theorem map,
+See the [SPEC](SPEC/hex-berlekamp-zassenhaus-theory.md) for the theorem map,
 certificate languages, and trust assumptions.
 
 # Contributing
